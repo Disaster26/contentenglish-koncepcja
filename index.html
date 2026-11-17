@@ -74,16 +74,21 @@ p{margin:0}
 }
 @media (min-width:1800px){.hero h1{font-size:4.4rem}}
 @media (max-width:860px){
-  .hero{display:flex;flex-direction:column;min-height:calc(100svh - var(--hh))}
-  .hero .ph{position:relative;flex:1 1 auto;min-height:clamp(170px,34svh,420px)}
-  .hero .ph img{position:absolute;inset:0;object-position:50% 30%}
-  .hero .ph::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:110px;background:url(img/kropki-poziom.svg) 0 100%/240px auto repeat-x}
-  .hero .txt{position:relative;padding:4px 16px 28px;width:100%}
-  .hero h1{font-size:clamp(1.75rem,6.6vw,2.6rem)}
-  .hero .lead{margin-top:14px}
-  .hero .cta{margin-top:24px;gap:14px 22px}
-  .hero .adr{margin-top:18px}
+  .hero{display:flex;flex-direction:column;min-height:calc(100svh - var(--hh) - 1px)}
+  .hero .ph{position:relative;flex:1 1 0;min-height:clamp(104px,22svh,420px)}
+  .hero .ph img{position:absolute;inset:0;object-position:50% 28%}
+  .hero .ph::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:clamp(44px,8svh,90px);background:url(img/kropki-poziom.svg) 0 100%/auto 100% repeat-x}
+  .hero .txt{position:relative;padding:clamp(6px,1.4svh,16px) 16px clamp(14px,2.6svh,28px);width:100%}
+  .hero h1{font-size:clamp(1.4rem,6.3vw,2.4rem);line-height:1.1;max-width:none}
+  .hero .lead{margin-top:clamp(8px,1.4svh,14px);font-size:clamp(.94rem,3.9vw,1.1rem);line-height:1.45}
+  .hero .lead .ld{display:none}
+  .hero .cta{margin-top:24px;gap:10px 20px}
+  .hero .btn{min-height:48px}
+  .hero .cta a.t{font-size:1rem}
+  .hero .adr{margin-top:clamp(8px,1.6svh,16px);font-size:.85rem;line-height:1.4}
+  .hero .adr .ln{display:none}
 }
+@media (min-width:861px){.hero .lead .lm{display:none}}
 /* sekcje */
 section{padding:clamp(64px,7vw,128px) 0}
 .g{background:var(--g)}
@@ -224,12 +229,12 @@ footer .bot{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,2
   </div>
   <div class="txt">
     <h1>Angielski, którym mówi Państwa branża</h1>
-    <p class="lead">Kursy i szkolenia językowe dla firm. Uczymy słownictwa z Państwa codziennej pracy: od rozmów na budowie i w projekcie po maile, telefony i negocjacje z partnerami z zagranicy.</p>
+    <p class="lead"><span class="ld">Kursy i szkolenia językowe dla firm. Uczymy słownictwa z Państwa codziennej pracy: od rozmów na budowie i w projekcie po maile, telefony i negocjacje z partnerami z zagranicy.</span><span class="lm">Kursy językowe dla firm: słownictwo z Państwa codziennej pracy, maile, telefony i negocjacje.</span></p>
     <div class="cta">
       <a class="btn" href="#kontakt">Zapytaj o kurs w firmie<i aria-hidden="true"><b></b><b></b><b></b></i></a>
       <a class="t" href="tel:+48507312331">tel. 507 312 331</a>
     </div>
-    <p class="adr">Content Professional English, ul. Marusarzówny 4/4B, Kraków</p>
+    <p class="adr"><span class="ln">Content Professional English, </span>ul. Marusarzówny 4/4B, Kraków</p>
   </div>
 </section>
 
